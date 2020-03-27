@@ -12,27 +12,37 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     plugins: [vuexLocal.plugin],
     state: {
+        isConnect: false,
         token: '',
         user: '',
-        channel: '',
-        messages: ''
+        series: '',
+        photos: '',
+        photo:'',
+        difficulty:'',
+        urlAxios:''
     },
     mutations: {
         setSession(state, data) {
             state.token = data.token;
             state.user = data.user;
+            state.isConnect=true;
         },
-        setSeries(state, membres) {
-            state.membres = membres
+        Logout(state) {
+          state.isConnect = false;
+          state.user = [];
+          state.token = "";
         },
-        setChannels(state, channels) {
-            state.channels = channels
+        setSeries(state, series) {
+            state.series = series
         },
-        setChannel(state, channel) {
-            state.channel = channel
+        setPhotos(state, photos) {
+            state.photos = photos
         },
-        setMessages(state, messages) {
-            state.messages = messages
+        setPhoto(state, photo) {
+            state.photo = photo
+        },
+        setDifficulty(state, diff) {
+            state.difficulty = diff
         }
     },
     actions: {},
