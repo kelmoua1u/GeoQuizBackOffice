@@ -48,7 +48,7 @@
        if(this.$store.state.token == "")
          {
            alert("Connectez-vous Svp ! ")
-           this.$router.push("/register");
+           this.$router.push("/");
          }else{
          this.getPictures();
          this.getSeries();
@@ -63,6 +63,7 @@
                            Authorization: 'Bearer ' + this.$store.state.token,
                            }
                          }).then(response => {
+                            alert("allo")
            this.$store.commit("setPhotos", "");
            this.pictures=response.data.result;
            console.log(response.data)

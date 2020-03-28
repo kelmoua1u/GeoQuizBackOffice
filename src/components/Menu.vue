@@ -36,7 +36,7 @@
        if(this.$store.state.token == "")
          {
            alert("Connectez-vous Svp ! ")
-           this.$router.push("/register");
+           this.$router.push("/");
          }else{
    
          this.$store.state.isConnect= false;

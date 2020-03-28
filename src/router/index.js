@@ -8,7 +8,7 @@ import OldPicture from '../components/Pictures'
 Vue.use(VueRouter)
 const routes = [
 {
-path: '/',
+path: '/home',
 name: 'Menu',
 component: Menu
 },
@@ -21,7 +21,7 @@ name: 'About',
 component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
 },
 {
-path: '/register',
+path: '/',
 name: 'Register',
 component: Register
 },

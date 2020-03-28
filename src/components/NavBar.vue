@@ -21,7 +21,7 @@
        },
        logout (){
            this.$store.commit("Logout");
-           this.$router.push("/register");
+           this.$router.push("/");
        },
        linktoSerie: function(item) {
            this.active = item;
@@ -38,7 +38,7 @@
          this.$router.push("/oldpictures");
        },
        linktoMenu: function() {
-         this.$router.push("/");
+         this.$router.push("/home");
        }
      }
    }

@@ -91,8 +91,15 @@ import axios from "axios"
        ]
      }
        }},mounted(){
+         if(this.$store.state.token == "")
+         {
+           alert("Connectez-vous Svp ! ")
+           this.$router.push("/");
+         }else{
+           
          this.getDifficulties();
          this.$store.state.isConnect= true;
+         }
           
        },
    methods:{

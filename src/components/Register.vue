@@ -71,7 +71,8 @@
            password : this.password
          }).then(response => {
            this.$store.commit('setSession',response.data)
-           this.$router.push('/');
+           
+           this.$router.push('/home');
            this.$router.go();
          })
          .catch(error => console.log(error))
